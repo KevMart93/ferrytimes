@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ferry Times</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Know Your Ferry Times!</h1>
+                <p class="lead">Ride Smart. Ride Efficiently. Ride the ferry.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 ferrySched">
+                <div class="card">
+                    <h5 class="card-header">Ferry Schedule</h5>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> Ferry Name</th>
+                                    <th scope="col"> Destination</th>
+                                    <th scope="col"> Arrival Time (Military Time)</th>
+                                    <th scope="col"> Frequency (Minutes)</th>
+                                    <th scope="col"> Next Ferry (Military Time)</th>
+                                    <th scope="col"> Arrival (Minutes)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h5 class="card-header">Enter Ferry Data</h5>
+            <div class="card-body">
+                <div class="row">
+                    <form form="role">
+                        <form class="form-group">
+                            <p class="ferryName">Ferry Name</p>
+                            <input type="text" class="form-control" id="ferryName">
+                        </form>
+                    </form>
+                </div>
+                <div class="row">
+                    <form form="role">
+                        <form class="form-group">
+                            <p class="ferryDes">Destination</p>
+                            <input type="text" class="form-control" id="ferryDes">
+                        </form>
+                    </form>
+                </div>
+                <div class="row">
+                    <form form="role">
+                        <form class="form-group">
+                            <p class="firstTime">First Arrival of the Day (HH:MM)</p>
+                            <input type="time" class="form-control" id="firstTime">
+                        </form>
+                    </form>
+                </div>
+                <div class="row">
+                    <form form="role">
+                        <form class="form-group">
+                            <p class="ferryFreq">Frequency (Minutes)</p>
+                            <input type="number" class="form-control" id="ferryFreq">
+                        </form>
+                    </form>
+                </div>
+
+                <button type="button" class="btn btn-info submitbtn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBIdd4btk3aSRGF0YW-KmMAUpoeK9-SsWk",
+    authDomain: "ferry-times-7f407.firebaseapp.com",
+    databaseURL: "https://ferry-times-7f407.firebaseio.com",
+    projectId: "ferry-times-7f407",
+    storageBucket: "ferry-times-7f407.appspot.com",
+    messagingSenderId: "397690970654"
+  };
+//   firebase.initializeApp(config);
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
